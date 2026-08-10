@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autohandel Kander Görlitz | Gebrauchtwagen kaufen & verkaufen</title>
+<meta name="description" content="Gebrauchtwagen in Görlitz kaufen und verkaufen. TÜV neu bei der Übergabe, Garantie, Zulassungsservice. Beratung auf Deutsch und Polnisch. 4,9 von 5 bei 204 Bewertungen.">
+<link rel="canonical" href="https://www.kander-goerlitz.de/">
+<meta name="theme-color" content="#1B9AAA">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kander-goerlitz.de/">
+<meta property="og:title" content="Autohandel Kander Görlitz — Gebrauchtwagen kaufen &amp; verkaufen">
+<meta property="og:description" content="Gebrauchtwagen in Görlitz. TÜV neu bei Übergabe, Garantie, Zulassung. 4,9 von 5 bei 204 Bewertungen.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Autohandel Kander Görlitz">
+<meta name="twitter:description" content="Gebrauchtwagen kaufen &amp; verkaufen. TÜV neu, Garantie, Zulassung.">
+<meta name="api-base" content="http://localhost:3000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Literata:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#050505;
+  --cyan:#1B9AAA;
+  --cyan-d:#15818F;
+  --bone:#DDDBCB;
+  --lace:#F5F1E3;
+  --white:#FFFFFF;
+  --ink:#050505;
+  --soft:#6B6B66;
+  --line:#DDDBCB;
+  --line2:#EAE7DB;
+  --sh1:0 1px 2px rgba(5,5,5,.05);
+  --sh2:0 4px 10px rgba(5,5,5,.07),0 18px 44px -22px rgba(5,5,5,.35);
+  --sh3:0 30px 70px -22px rgba(5,5,5,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--white);color:var(--ink);
+  font-family:'Literata',Georgia,serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Archivo,sans-serif;letter-spacing:-.025em;line-height:1.05;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.4rem,5.6vw,4.5rem);font-weight:900}
+h2{font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:800}
+h3{font-size:1.05rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1rem}
+.kicker{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-d);font-weight:700;margin:0 0 14px}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:1rem;
+  padding:15px 26px;border-radius:6px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s;font-family:inherit}
+.btn-cyan{background:var(--cyan);color:#fff}
+.btn-cyan:hover{background:var(--cyan-d)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-dark:hover{background:#1c1c1c}
+.btn-line{border-color:var(--line);background:#fff}
+.btn-line:hover{border-color:var(--black)}
+.btn-ghostw{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghostw:hover{background:rgba(255,255,255,.14)}
+.btn-sm{padding:9px 15px;font-size:.88rem}
+
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
+.bar{display:flex;align-items:center;gap:26px;height:70px}
+.brand{text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+.brand-mark{flex:none}
+.bname{font-family:Archivo,sans-serif;font-weight:800;font-size:1.15rem;line-height:1.1;letter-spacing:-.02em}
+.bname span{display:block;font-weight:500;font-size:.66rem;letter-spacing:.16em;color:var(--soft);text-transform:uppercase;margin-top:3px}
+nav{display:flex;gap:22px}
+nav a{text-decoration:none;color:var(--soft);font-size:.93rem;font-weight:500;padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-color:var(--cyan)}
+.hcall{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.97rem;white-space:nowrap}
+.hcall svg{color:var(--cyan)}
+
+/* hero */
+.hero{position:relative;min-height:min(640px,84vh);display:flex;align-items:flex-end;background:var(--black);overflow:hidden}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 58%;opacity:.62}
+.hero-img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(5,5,5,.55) 0%,rgba(5,5,5,.18) 34%,rgba(5,5,5,.86) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding:80px 0 46px;color:#fff}
+.hero h1{color:#fff;max-width:14ch}
+.hero h1 .ac{color:var(--cyan)}
+.hero .lead{font-size:1.13rem;color:rgba(255,255,255,.86);max-width:40ch;margin:22px 0 30px}
+.hero-btns{display:flex;gap:13px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.24);font-size:.92rem;color:rgba(255,255,255,.8)}
+.hero-meta b{color:#fff}
+.hero-meta .st{color:var(--cyan);letter-spacing:1px}
+
+.livebar{background:var(--black);color:rgba(255,255,255,.8);font-size:.87rem;border-top:1px solid rgba(255,255,255,.1)}
+.livebar .wrap{display:flex;gap:34px;flex-wrap:wrap;padding-top:13px;padding-bottom:13px}
+.livebar b{color:#fff}
+.livebar .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);display:inline-block;margin-right:8px}
+
+section{padding:72px 0}
+
+/* reviews */
+.rslider{background:var(--lace);border-bottom:1px solid var(--line2);padding:44px 0 48px}
+.rs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.rs-score{display:flex;align-items:center;gap:14px}
+.rs-score .n{font-family:Archivo,sans-serif;font-weight:900;font-size:2.6rem;letter-spacing:-.04em;line-height:1}
+.rs-score .st{color:var(--cyan);letter-spacing:2px;font-size:.95rem}
+.rs-score .sub{font-size:.9rem;color:var(--soft)}
+.rtrack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:22px 24px;display:flex;flex-direction:column;box-shadow:var(--sh1)}
+.rcard .st{color:var(--cyan);letter-spacing:2px;font-size:.86rem;margin-bottom:11px}
+.rcard blockquote{margin:0 0 16px;font-size:.96rem;line-height:1.55}
+.rcard .who{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;
+  padding-top:14px;border-top:1px solid var(--line2)}
+.rcard .nm{font-weight:600;font-size:.9rem}
+.rcard .car{font-size:.8rem;color:var(--soft)}
+.src{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 9px;border-radius:4px;background:var(--lace);color:var(--soft);white-space:nowrap}
+.rs-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.rs-link{display:inline-flex;align-items:center;padding:8px 14px;border:1px solid var(--line);border-radius:999px;
+  background:#fff;color:var(--ink);font-size:.82rem;font-weight:600;text-decoration:none;transition:border-color .15s,background-color .15s}
+.rs-link:hover{border-color:var(--cyan);background:#E4F4F5}
+
+/* rail + grid */
+.rail-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.rail{display:flex;gap:18px;overflow-x:auto;padding:4px 24px 18px;margin:0 -24px;scroll-snap-type:x mandatory}
+.rail::-webkit-scrollbar{height:5px}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.rail .car-card{flex:0 0 300px;scroll-snap-align:start}
+
+.car-card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:var(--sh1);
+  display:flex;flex-direction:column;cursor:pointer;color:inherit;text-decoration:none;transition:box-shadow .16s,transform .16s}
+.car-card:hover{box-shadow:var(--sh2);transform:translateY(-3px)}
+.car-card.sold{opacity:.55;cursor:default}
+.car-card.sold:hover{box-shadow:var(--sh1);transform:none}
+.car-card.sold:hover .car-ph img{transform:none}
+.car-ph{position:relative;aspect-ratio:4/3;background:var(--bone);overflow:hidden}
+.car-ph img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.car-card:hover .car-ph img{transform:scale(1.04)}
+.tags{position:absolute;top:10px;left:10px;display:flex;gap:5px;flex-wrap:wrap;max-width:86%}
+.tag{font-size:.63rem;letter-spacing:.06em;font-weight:700;padding:4px 8px;border-radius:4px;
+  background:rgba(5,5,5,.82);color:#fff}
+.tag.tuv{background:var(--cyan)}
+.tag.sold{background:#888}
+.tag.reserved{background:#C87A00}
+.phcount{position:absolute;bottom:10px;right:10px;background:rgba(5,5,5,.75);color:#fff;font-size:.7rem;
+  font-weight:600;padding:4px 9px;border-radius:4px;display:flex;align-items:center;gap:5px}
+.car-b{padding:16px 17px;display:flex;flex-direction:column;flex:1}
+.car-b h3{margin-bottom:5px;line-height:1.25}
+.car-sub{font-size:.85rem;color:var(--soft);margin-bottom:13px}
+.car-f{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-top:13px;border-top:1px solid var(--line2)}
+.pr{font-family:Archivo,sans-serif;font-weight:900;font-size:1.3rem;letter-spacing:-.03em}
+.pr small{display:block;font-weight:500;font-size:.66rem;color:var(--soft);font-family:Inter,sans-serif;letter-spacing:0}
+.fin{font-size:.79rem;color:var(--soft);text-align:right}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:16px 18px;background:var(--lace);
+  border-radius:10px;border:1px solid var(--line2);margin-bottom:20px}
+.filters input,.filters select{padding:12px;border:1px solid var(--line);border-radius:6px;background:#fff;
+  font-family:inherit;font-size:.93rem;color:var(--ink)}
+.filters input{flex:1;min-width:180px}
+.resline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;
+  font-size:.9rem;color:var(--soft)}
+.resline b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;background:var(--lace);border-radius:10px;color:var(--soft)}
+
+/* about */
+.about{background:var(--lace);border-top:1px solid var(--line2)}
+.about-in{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.ph-slot{aspect-ratio:4/5;border-radius:10px;background:var(--bone);display:grid;place-content:center;
+  text-align:center;color:var(--soft);font-size:.82rem;line-height:1.8;padding:24px;box-shadow:var(--sh1)}
+.facts{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:0}
+.facts li{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:none}
+.facts svg{flex:none;color:var(--cyan);margin-top:4px}
+.facts b{display:block}
+.facts span{color:var(--soft);font-size:.93rem}
+
+/* sell */
+.sell{background:var(--black);color:#fff}
+.sell-in{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.sell h2{color:#fff}
+.sell .kicker{color:var(--cyan)}
+.sell p.l{color:rgba(255,255,255,.8);font-size:1.05rem}
+.slist{list-style:none;margin:22px 0 0;padding:0}
+.slist li{display:flex;gap:13px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:.97rem}
+.slist li:last-child{border:none}
+.slist svg{flex:none;color:var(--cyan);margin-top:4px}
+.slist b{display:block}
+.slist span{color:rgba(255,255,255,.7);font-size:.9rem}
+.fcard{background:#fff;color:var(--ink);border-radius:12px;padding:28px;box-shadow:var(--sh3)}
+.dots{display:flex;gap:7px;margin-bottom:20px}
+.dots i{flex:1;height:4px;border-radius:2px;background:var(--bone)}
+.dots i.on{background:var(--cyan)}
+.fstep{display:none}.fstep.on{display:block}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:.78rem;font-weight:600;color:var(--soft);margin-bottom:6px}
+.fld label .req{color:var(--cyan-d)}
+.fld input,.fld select,.fld textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:6px;
+  font-family:inherit;font-size:.98rem;background:#fff;color:var(--ink)}
+.fld input.vin{text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.vin-wrap{position:relative}
+.vin-wrap .vin{padding-right:42px}
+.vin-spinner{position:absolute;right:14px;top:50%;width:17px;height:17px;margin-top:-8px;border:2px solid var(--line);border-top-color:var(--cyan);border-radius:50%;display:none;animation:vinspin .7s linear infinite}
+.vin-spinner.on{display:block}
+.fld input.autofilled,.fld select.autofilled{animation:vinfill 1.25s ease-out}
+@keyframes vinspin{to{transform:rotate(360deg)}}
+@keyframes vinfill{0%,45%{background:#E4F4F5;border-color:var(--cyan)}100%{background:#fff;border-color:var(--line)}}
+.fld textarea{min-height:84px;resize:vertical}
+.hint{font-size:.8rem;color:var(--soft);margin-top:6px}
+.fnav{display:flex;gap:10px;margin-top:18px}
+.err{color:#B4342A;font-size:.86rem;margin-top:9px;display:none}
+.err.on{display:block}
+.tick{width:52px;height:52px;border-radius:50%;background:#E4F4F5;color:var(--cyan-d);display:grid;place-items:center;margin:0 auto 14px}
+
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+.ct dl{display:grid;grid-template-columns:auto 1fr;gap:13px 22px;margin:0}
+.ct dt{font-size:.78rem;font-weight:600;color:var(--soft);padding-top:4px}
+.ct dd{margin:0}
+.ct a{color:var(--cyan-d);font-weight:600;text-decoration:none}
+.ct a:hover{text-decoration:underline}
+.map{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.map iframe{display:block;width:100%;height:320px;border:0}
+.pl-note{background:#E4F4F5;border:1px solid #BEE2E6;border-radius:8px;padding:15px 17px;margin-top:22px;font-size:.94rem}
+
+footer{background:var(--black);color:rgba(255,255,255,.7);padding:48px 0 92px;font-size:.92rem}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px}
+footer h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 14px;font-weight:700}
+footer a{text-decoration:none}
+footer a:hover{color:var(--cyan)}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:8px}
+footer li a{padding:6px 0;display:inline-block}
+.fb{border-top:1px solid rgba(255,255,255,.14);margin-top:30px;padding-top:17px;font-size:.82rem;opacity:.6;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* modal + gallery */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.on{display:flex}
+.mbg{position:absolute;inset:0;background:rgba(5,5,5,.7);backdrop-filter:blur(3px)}
+.mcard{position:relative;background:#fff;border-radius:12px;max-width:860px;width:100%;max-height:92vh;
+  overflow:auto;box-shadow:var(--sh3)}
+.gal{position:relative;background:var(--black)}
+.gtrack{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.gtrack::-webkit-scrollbar{display:none}
+.gtrack img{flex:0 0 100%;scroll-snap-align:center;aspect-ratio:16/10;object-fit:cover}
+.garr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;
+  border:none;background:rgba(255,255,255,.92);cursor:pointer;display:grid;place-items:center;box-shadow:var(--sh1)}
+.garr.l{left:12px}.garr.r{right:12px}
+.garr:hover{background:#fff}
+.gdots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
+.gdots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45)}
+.gdots i.on{background:#fff}
+.gcount{position:absolute;top:12px;right:12px;background:rgba(5,5,5,.7);color:#fff;font-size:.75rem;
+  font-weight:600;padding:5px 11px;border-radius:5px}
+.mh{padding:22px 26px 16px;border-bottom:1px solid var(--line2);display:flex;justify-content:space-between;gap:14px}
+.mb{padding:22px 26px 28px}
+.close{background:var(--lace);border:none;width:34px;height:34px;border-radius:7px;cursor:pointer;
+  font-size:1.1rem;color:var(--soft);flex:none}
+.dl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);
+  border-radius:8px;overflow:hidden;margin-bottom:20px}
+.dl div{background:#fff;padding:12px 14px}
+.dl dt{font-size:.72rem;color:var(--soft);font-weight:500}
+.dl dd{margin:3px 0 0;font-weight:600}
+.mcta{display:flex;gap:11px;flex-wrap:wrap}
+
+/* ── Anfrage-Modal ─────────────────────────────────────────────────────── */
+#anfrageModal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:18px}
+#anfrageModal.on{display:flex}
+.afbg{position:absolute;inset:0;background:rgba(5,5,5,.75);backdrop-filter:blur(3px)}
+.afcard{position:relative;background:#fff;border-radius:12px;max-width:440px;width:100%;box-shadow:var(--sh3);overflow:hidden}
+.afhead{padding:20px 22px 16px;border-bottom:1px solid var(--line2);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.afhead h3{font-family:Archivo,sans-serif;font-size:1.05rem;font-weight:700;margin:0}
+.afhead p{margin:4px 0 0;font-size:.82rem;color:var(--soft)}
+.afbody{padding:20px 22px 24px;display:flex;flex-direction:column;gap:14px}
+.aff label{display:block;font-size:.78rem;font-weight:600;color:var(--soft);margin-bottom:5px;letter-spacing:.02em;text-transform:uppercase}
+.aff input[type=text],.aff input[type=tel],.aff input[type=email]{width:100%;padding:9px 12px;font-size:.92rem;
+  border:1.5px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);font-family:inherit;outline:none;transition:.14s}
+.aff input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(27,154,170,.12)}
+.aff input.err{border-color:#d93535}
+.aff-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.phone-row{display:flex;gap:8px;align-items:stretch}
+.pfx-wrap{position:relative;flex-shrink:0}
+.pfx-btn{display:flex;align-items:center;gap:5px;padding:9px 10px;height:100%;
+  border:1.5px solid var(--line);border-radius:7px;background:#fff;cursor:pointer;
+  font-size:.88rem;white-space:nowrap;transition:.14s;font-family:inherit}
+.pfx-btn:hover,.pfx-btn.open{border-color:var(--cyan)}
+.pfx-drop{position:absolute;top:calc(100% + 4px);left:0;z-index:10;background:#fff;
+  border:1.5px solid var(--line2);border-radius:9px;box-shadow:var(--sh2);width:248px;overflow:hidden;display:none}
+.pfx-drop.on{display:block}
+.pfx-search{padding:8px 11px;border:none;border-bottom:1px solid var(--line2);width:100%;
+  font-size:.86rem;outline:none;font-family:inherit;background:#fff}
+.pfx-list{max-height:200px;overflow-y:auto}
+.pfx-opt{display:flex;align-items:center;gap:8px;width:100%;padding:8px 12px;
+  border:none;background:none;cursor:pointer;font-size:.85rem;font-family:inherit;text-align:left;transition:.1s}
+.pfx-opt:hover,.pfx-opt.sel{background:var(--lace)}
+.pfx-dial{margin-left:auto;color:var(--soft);font-size:.78rem}
+.aff-consent{display:flex;gap:9px;align-items:flex-start;font-size:.8rem;color:var(--soft);line-height:1.5;cursor:pointer}
+.aff-consent input{margin-top:3px;accent-color:var(--cyan);flex-shrink:0}
+.af-actions{display:flex;gap:10px}
+.af-actions .btn{flex:1;justify-content:center;text-align:center}
+.af-ferr{font-size:.79rem;color:#d93535;background:#fff5f5;padding:8px 12px;border-radius:6px;border:1px solid #ffd0d0;display:none}
+.af-ferr.on{display:block}
+.af-ok{display:none;flex-direction:column;align-items:center;text-align:center;padding:32px 24px 36px;gap:10px}
+.af-ok.on{display:flex}
+.af-ok svg{color:var(--cyan)}
+.af-ok h3{font-family:Archivo,sans-serif;font-weight:700;margin:0;font-size:1.1rem}
+.af-ok p{color:var(--soft);font-size:.9rem;margin:0}
+
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:#fff;border-top:1px solid var(--line);
+  padding:9px 12px;gap:9px;box-shadow:0 -4px 20px rgba(5,5,5,.1)}
+.mbar .btn{flex:1;padding:12px 8px;font-size:.92rem}
+
+@media(max-width:1080px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .about-in,.sell-in,.ct,.fg{grid-template-columns:1fr;gap:30px}
+  nav{display:none}
+}
+@media(max-width:760px){
+  section{padding:54px 0}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .row2,.dl{grid-template-columns:1fr}
+  .dl{grid-template-columns:1fr 1fr}
+  .hcall span{display:none}
+  .mbar{display:flex}
+  footer{padding-bottom:86px}
+  .hero{min-height:auto}
+  .hero-in{padding:56px 0 40px}
+  .rtrack{grid-template-columns:1fr}
+}
+@media(max-width:460px){.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["AutoDealer", "LocalBusiness"],
+  "name": "Autohandel Kander",
+  "url": "https://www.kander-goerlitz.de/",
+  "telephone": "+49 3581 750559",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Friedrich-List-Str. 2–4",
+    "postalCode": "02827",
+    "addressLocality": "Görlitz",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "204",
+    "bestRating": "5"
+  }
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="12" fill="var(--cyan)"/>
+        <path d="M8 6v12M8 12l8-6M8 12l8 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="bname">Autohandel Kander<span>Görlitz seit 2003</span></span>
+    </a>
+    <nav>
+      <a href="#bestand">Fahrzeuge</a>
+      <a href="#verkaufen">Auto verkaufen</a>
+      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="hcall" href="tel:+493581750559">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      <span>03581 750559</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="padding:0">
+  <div class="hero-img">
+    <img src="https://img.classistatic.de/api/v1/mo-prod/images/82/828fa5f7-86c6-4a1c-a18b-9433f6b9b8ed?rule=mo-1600" alt="Fahrzeug bei Autohandel Kander in Görlitz">
+  </div>
+  <div class="wrap hero-in">
+    <p class="kicker" style="color:var(--cyan)">Görlitz-Rauschwalde · seit 2003</p>
+    <h1>TÜV neu.<br>Garantie.<br><span class="ac">Ehrlich gesagt.</span></h1>
+    <p class="lead">Gebrauchtwagen, die vor der Übergabe zur Hauptuntersuchung gehen. Wir sagen Ihnen vorher, was dran ist.</p>
+    <div class="hero-btns">
+      <a class="btn btn-cyan" href="#bestand">Fahrzeuge ansehen</a>
+      <a class="btn btn-ghostw" href="tel:+493581750559">03581 750559</a>
+    </div>
+    <div class="hero-meta">
+      <span><span class="st">★★★★★</span> <b>4,9</b> bei <a href="https://www.autoscout24.de/haendler/autohandel-kander" target="_blank" rel="noopener" aria-label="204 Bewertungen auf AutoScout24">204 Bewertungen</a></span>
+      <span>Händler seit <b>2003</b></span>
+      <span>Deutsch &amp; <b>Polski</b></span>
+    </div>
+  </div>
+</section>
+
+<div class="livebar">
+  <div class="wrap">
+    <span><span class="dot"></span>Mo–Fr 9–18 Uhr, Sa 9–14 Uhr</span>
+    <span><b id="anz">20</b> Fahrzeuge auf dem Hof</span>
+    <span>Zulassung &amp; Wunschkennzeichen im Haus</span>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="rslider">
+  <div class="wrap">
+    <div class="rs-head">
+      <div class="rs-score">
+        <span class="n">4,9</span>
+        <div>
+          <div class="st">★★★★★</div>
+          <div class="sub"><a href="https://home.mobile.de/KANDER" target="_blank" rel="noopener" aria-label="204 Bewertungen auf mobile.de">204 Bewertungen</a> auf mobile.de &amp; AutoScout24</div>
+        </div>
+      </div>
+    </div>
+    <div class="rtrack" id="rtrack"></div>
+    <div class="rs-links" aria-label="Bewertungsportale">
+      <a class="rs-link" href="https://home.mobile.de/KANDER" target="_blank" rel="noopener">→ Alle Bewertungen auf mobile.de</a>
+      <a class="rs-link" href="https://www.autoscout24.de/haendler/autohandel-kander" target="_blank" rel="noopener">→ Alle Bewertungen auf AutoScout24</a>
+    </div>
+  </div>
+</div>
+
+<!-- BESTAND -->
+<section id="bestand">
+  <div class="wrap">
+    <div class="rail-head">
+      <div>
+        <p class="kicker">Neu auf dem Hof</p>
+        <h2>Zuletzt hereingekommen</h2>
+      </div>
+      <a class="btn btn-line btn-sm" href="https://home.mobile.de/KANDER" target="_blank" rel="noopener">Alle Inserate auf mobile.de →</a>
+    </div>
+    <div class="rail" id="rail"></div>
+
+    <div style="margin-top:44px">
+      <h2 style="margin-bottom:20px">Der gesamte Bestand</h2>
+      <div class="filters">
+        <input id="q" type="search" placeholder="Suchen — z. B. BMW, Automatik, Diesel" aria-label="Fahrzeugsuche">
+        <select id="fMarke" aria-label="Marke filtern"><option value="">Alle Marken</option></select>
+        <select id="fPreis" aria-label="Preis filtern">
+          <option value="">Preis egal</option>
+          <option value="5000">bis 5.000 €</option>
+          <option value="10000">bis 10.000 €</option>
+          <option value="15000">bis 15.000 €</option>
+          <option value="25000">bis 25.000 €</option>
+        </select>
+        <select id="fKraft" aria-label="Kraftstoff filtern"><option value="">Kraftstoff egal</option></select>
+        <select id="fSort" aria-label="Sortieren nach">
+          <option value="preis-asc">Preis aufsteigend</option>
+          <option value="preis-desc">Preis absteigend</option>
+          <option value="km-asc">Kilometer aufsteigend</option>
+          <option value="ez-desc">Baujahr neueste</option>
+        </select>
+        <button class="btn btn-line btn-sm" id="reset" type="button">Zurücksetzen</button>
+      </div>
+      <div class="resline">
+        <span><b id="count">0</b> Fahrzeuge · Stand <span id="stand"></span></span>
+        <span>Alle Preise inkl. MwSt., soweit nicht anders angegeben</span>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section id="ueber" class="about">
+  <div class="wrap about-in">
+    <div class="ph-slot">Foto-Slot<br>Darius Kander<br>auf dem Hof<br><br>(eigenes Bild einsetzen)</div>
+    <div>
+      <p class="kicker">Über uns</p>
+      <h2>Ein Betrieb, ein Ansprechpartner.</h2>
+      <p style="margin-top:18px;color:var(--soft)">Autohandel Kander wird seit 2003 von Darius Kander geführt. Wer hier kauft, spricht mit dem Inhaber — nicht mit einem Verkaufsteam.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Hauptuntersuchung vor der Übergabe</b><span>Der überwiegende Teil unserer Fahrzeuge wird mit TÜV neu übergeben.</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Zulassung und Wunschkennzeichen</b><span>Papierkram übernehmen wir, Sie fahren angemeldet vom Hof.</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Sieben Leistungen an einem Ort</b><span>An- und Verkauf, Selbsthilfewerkstatt, Reifen, Zulassung, Versicherung, Autopflege, Anhängervermietung.</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Beratung auf Deutsch und Polnisch</b><span>Zgorzelec liegt zwei Kilometer entfernt.</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- VERKAUFEN -->
+<section id="verkaufen" class="sell">
+  <div class="wrap sell-in">
+    <div>
+      <p class="kicker">Auto verkaufen</p>
+      <h2>Ihr Auto steht noch in der Einfahrt?</h2>
+      <p class="l">Wir kaufen laufend an — auch in Zahlung, wenn Sie bei uns ein anderes Fahrzeug nehmen.</p>
+      <ul class="slist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Ein Termin statt zwanzig</b><span>Keine Besichtigungen mit Fremden, keine Probefahrten mit Unbekannten.</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Abmeldung übernehmen wir</b><span>Papierkram inklusive — auch für Kunden aus Polen.</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="19" height="19"><path d="M20 6 9 17l-5-5"/></svg><span><b>Bezahlung bei Übergabe</b><span>Kein Warten auf Ratenzahlung von Privatkäufern.</span></span></li>
+      </ul>
+    </div>
+
+    <div class="fcard">
+      <div class="dots"><i class="on"></i><i></i><i></i></div>
+      <form id="sf" novalidate>
+        <div class="fstep on" data-step="1">
+          <h3 style="margin-bottom:15px;font-size:1.15rem">Was für ein Fahrzeug ist es?</h3>
+          <div class="fld">
+            <label for="vin">Fahrgestellnummer (FIN) <span class="req">*</span></label>
+            <div class="vin-wrap">
+              <input id="vin" class="vin" maxlength="17" placeholder="WVWZZZ1KZAW000000" autocomplete="off">
+              <span class="vin-spinner" id="vinSpinner" aria-hidden="true"></span>
+            </div>
+            <p class="hint">17 Zeichen, steht im Fahrzeugschein unter Feld E. Damit können wir Ausstattung und Historie direkt prüfen — das macht unser Angebot verbindlicher.</p>
+          </div>
+          <div class="row2">
+            <div class="fld"><label for="s1">Marke <span class="req">*</span></label><input id="s1" placeholder="z. B. Opel"></div>
+            <div class="fld"><label for="s2">Modell <span class="req">*</span></label><input id="s2" placeholder="z. B. Astra"></div>
+          </div>
+          <div class="row2">
+            <div class="fld"><label for="s3">Erstzulassung <span class="req">*</span></label><input id="s3" type="number" min="1960" max="2026" placeholder="2016"></div>
+            <div class="fld"><label for="s4">Kilometerstand <span class="req">*</span></label><input id="s4" type="number" min="0" placeholder="120000"></div>
+          </div>
+          <p class="err" id="e1">Bitte FIN (17 Zeichen) sowie Marke, Modell, Erstzulassung und Kilometerstand angeben.</p>
+          <div class="fnav"><button class="btn btn-cyan" type="button" data-next="2">Weiter</button></div>
+        </div>
+
+        <div class="fstep" data-step="2">
+          <h3 style="margin-bottom:15px;font-size:1.15rem">Wie ist der Zustand?</h3>
+          <div class="row2">
+            <div class="fld"><label for="s5">Kraftstoff</label>
+              <select id="s5"><option>Benzin</option><option>Diesel</option><option>Hybrid</option><option>Elektro</option><option>Autogas (LPG)</option></select></div>
+            <div class="fld"><label for="s6">Getriebe</label>
+              <select id="s6"><option>Schaltgetriebe</option><option>Automatik</option></select></div>
+          </div>
+          <div class="row2">
+            <div class="fld"><label for="s7">TÜV bis</label><input id="s7" placeholder="z. B. 03/2027"></div>
+            <div class="fld"><label for="s8">Schäden</label>
+              <select id="s8"><option>Unfallfrei</option><option>Reparierter Vorschaden</option><option>Unfallschaden vorhanden</option></select></div>
+          </div>
+          <div class="fld"><label for="s9">Was sollten wir wissen?</label>
+            <textarea id="s9" placeholder="Bekannte Mängel, Ausstattung, Serviceheft, neue Reifen …"></textarea></div>
+          <div class="fnav">
+            <button class="btn btn-line" type="button" data-prev="1">Zurück</button>
+            <button class="btn btn-cyan" type="button" data-next="3">Weiter</button>
+          </div>
+        </div>
+
+        <div class="fstep" data-step="3">
+          <h3 style="margin-bottom:15px;font-size:1.15rem">Wie erreichen wir Sie?</h3>
+          <div class="fld"><label for="s10">Name <span class="req">*</span></label><input id="s10" placeholder="Vor- und Nachname"></div>
+          <div class="row2">
+            <div class="fld"><label for="s11">Telefon <span class="req">*</span></label><input id="s11" type="tel" placeholder="0179 …"></div>
+            <div class="fld"><label for="s12">E-Mail</label><input id="s12" type="email" placeholder="optional"></div>
+          </div>
+          <div class="fld"><label for="s13">Rückruf auf</label>
+            <select id="s13"><option>Deutsch</option><option>Polnisch / po polsku</option></select></div>
+          <p class="err" id="e3">Bitte Name und Telefonnummer angeben.</p>
+          <div class="fnav">
+            <button class="btn btn-line" type="button" data-prev="2">Zurück</button>
+            <button class="btn btn-cyan" id="sSubmit" type="submit">Angebot anfragen</button>
+          </div>
+          <p class="hint" style="margin-top:11px">Unverbindlich. Rückmeldung in der Regel am selben Werktag.</p>
+        </div>
+
+        <div class="fstep" data-step="4" style="text-align:center">
+          <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" width="24" height="24"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3 style="margin-bottom:7px;font-size:1.15rem">Anfrage gesendet</h3>
+          <p id="dtxt" style="color:var(--soft)" aria-live="polite">Danke — wir melden uns zurück.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" style="background:var(--lace);border-top:1px solid var(--line2)">
+  <div class="wrap">
+    <p class="kicker">Kontakt</p>
+    <h2 style="margin-bottom:30px">Friedrich-List-Straße, Ecke Reichenbacher</h2>
+    <div class="ct">
+      <div>
+        <dl>
+          <dt>Adresse</dt><dd>Autohandel Kander · Inhaber Darius Kander<br>Friedrich-List-Str. 2–4<br>02827 Görlitz-Rauschwalde</dd>
+          <dt>Telefon</dt><dd><a href="tel:+493581750559">03581 750559</a></dd>
+          <dt>Mobil</dt><dd><a href="tel:+491791310304">0179 1310304</a></dd>
+          <dt>E-Mail</dt><dd><a href="mailto:ah-kander@gmx.de">ah-kander@gmx.de</a></dd>
+          <dt>Zeiten</dt><dd>Mo–Fr 9:00–18:00 Uhr · Sa 9:00–14:00 Uhr</dd>
+        </dl>
+        <div class="pl-note"><b>Mówimy po polsku.</b> Zgorzelec ist zwei Kilometer entfernt — Beratung, Papiere und Rückruf gern auf Polnisch.</div>
+      </div>
+      <div class="map">
+        <iframe title="Standort auf der Karte" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Friedrich-List-Stra%C3%9Fe%202-4,%2002827%20G%C3%B6rlitz&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <h4>Autohandel Kander</h4>
+        <p style="margin:0">Inhaber Darius Kander<br>Friedrich-List-Str. 2–4<br>02827 Görlitz-Rauschwalde</p>
+        <p style="margin:12px 0 0"><a href="tel:+493581750559">03581 750559</a> · <a href="mailto:ah-kander@gmx.de">ah-kander@gmx.de</a></p>
+      </div>
+      <div>
+        <h4>Fahrzeuge</h4>
+        <ul>
+          <li><a href="#bestand">Aktueller Bestand</a></li>
+          <li><a href="#verkaufen">Auto verkaufen</a></li>
+          <li><a href="https://home.mobile.de/KANDER" target="_blank" rel="noopener">Inserate auf mobile.de</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul><li><a href="/impressum.html">Impressum</a></li><li><a href="/datenschutz.html">Datenschutz</a></li></ul>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© <span id="jahr">2026</span> Autohandel Kander · Görlitz</span>
+      <span>Gebrauchtwagen · Werkstatt · Reifen · Zulassung · Anhänger</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="#verkaufen">Auto verkaufen</a>
+  <a class="btn btn-cyan" href="tel:+493581750559">Anrufen</a>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mT">
+  <div class="mbg" data-close></div>
+  <div class="mcard">
+    <div class="gal">
+      <div class="gtrack" id="gtrack"></div>
+      <button class="garr l" id="gPrev" aria-label="Vorheriges Foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="garr r" id="gNext" aria-label="Nächstes Foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="gcount" id="gCount"></div>
+      <div class="gdots" id="gDots"></div>
+    </div>
+    <div class="mh">
+      <div><h3 id="mT" style="font-size:1.25rem"></h3><p id="mS" style="color:var(--soft);margin:5px 0 0;font-size:.9rem"></p></div>
+      <button class="close" data-close aria-label="Schließen">✕</button>
+    </div>
+    <div class="mb">
+      <dl class="dl" id="mD"></dl>
+      <div class="mcta">
+        <a class="btn btn-cyan" href="tel:+493581750559">Anrufen: 03581 750559</a>
+        <button class="btn btn-line" id="btnAnfrage" type="button">Anfrage</button>
+        <a class="btn btn-line" id="mWhatsApp" href="https://wa.me/4917913103004" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-line" href="https://home.mobile.de/KANDER" target="_blank" rel="noopener">Inserat auf mobile.de</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ANFRAGE MODAL -->
+<div id="anfrageModal" role="dialog" aria-modal="true" aria-label="Anfrage senden">
+  <div class="afbg" id="afBg"></div>
+  <div class="afcard">
+    <div class="afhead">
+      <div><h3>Anfrage senden</h3><p id="afSubtitle"></p></div>
+      <button class="close" id="afClose" aria-label="Schließen" type="button">✕</button>
+    </div>
+    <!-- success state -->
+    <div class="af-ok" id="afOk">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+      <h3>Anfrage eingegangen</h3>
+      <p>Wir melden uns in der Regel noch am selben Werktag.</p>
+      <button class="btn btn-cyan" id="afOkClose" type="button" style="margin-top:6px">Schließen</button>
+    </div>
+    <!-- form -->
+    <form id="afForm" class="afbody" novalidate>
+      <div class="aff aff-row2">
+        <div>
+          <label for="afFirst">Vorname <span style="color:#d93535">*</span></label>
+          <input type="text" id="afFirst" placeholder="Max" autocomplete="given-name">
+        </div>
+        <div>
+          <label for="afLast">Nachname <span style="color:#d93535">*</span></label>
+          <input type="text" id="afLast" placeholder="Mustermann" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="aff">
+        <label>Telefonnummer <span style="color:#d93535">*</span></label>
+        <div class="phone-row">
+          <div class="pfx-wrap">
+            <button type="button" class="pfx-btn" id="pfxBtn">
+              <span id="pfxFlag">🇩🇪</span><span id="pfxDial">+49</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="pfx-drop" id="pfxDrop">
+              <input class="pfx-search" id="pfxSearch" type="text" placeholder="Land suchen…" autocomplete="off">
+              <div class="pfx-list" id="pfxList"></div>
+            </div>
+          </div>
+          <input type="tel" id="afPhone" placeholder="15123456789" autocomplete="tel-national" style="flex:1;min-width:0">
+        </div>
+      </div>
+      <div class="aff">
+        <label for="afEmail">E-Mail <span style="color:var(--soft);font-weight:400;text-transform:none">(optional)</span></label>
+        <input type="email" id="afEmail" placeholder="max@beispiel.de" autocomplete="email">
+      </div>
+      <label class="aff-consent">
+        <input type="checkbox" id="afConsent">
+        Ich stimme der Verarbeitung meiner Daten zur Bearbeitung dieser Anfrage gemäß der Datenschutzerklärung zu.
+      </label>
+      <div class="af-ferr" id="afErr"></div>
+      <div class="af-actions">
+        <button type="button" class="btn btn-line" id="afCancel">Abbrechen</button>
+        <button type="submit" class="btn btn-cyan" id="afSubmit">Anfragen</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   FAHRZEUGDATEN — Stand 29.07.2026 von home.mobile.de/KANDER
+   -------------------------------------------------------------------------
+   "bilder" ist ein Array. Die Übersichtsseite von mobile.de liefert nur
+   das Titelbild je Inserat; die vollständigen Galerien stehen auf den
+   Detailseiten. Der Feed (Seller-API bzw. CSV/XML-Export) liefert alle
+   Fotos je Fahrzeug — dann füllt sich der Slider automatisch.
+
+   Produktivbetrieb:
+     return await (await fetch('/data/fahrzeuge.json')).json();
+
+   BILDER: URLs zeigen auf den mobile.de-CDN. Für die Live-Seite die
+   Originalfotos auf den eigenen Server legen (Hotlinking ist weder
+   zuverlässig noch von den Portal-AGB gedeckt).
+   ========================================================================= */
+const IMG='https://img.classistatic.de/api/v1/mo-prod/images/';
+const V=[
+ {m:'BMW',t:'218 i Active Tourer',p:12399,ez:'03/2016',j:2016,km:124899,ps:136,kw:100,k:'Benzin',g:'Automatik',fin:131,
+  tags:['TÜV NEU','GARANTIE','AHK'],bilder:['43/43cbe11b-f392-4738-b2ff-4bb4ca3b065b']},
+ {m:'BMW',t:'218 Active Tourer Kamera',p:12399,ez:'03/2016',j:2016,km:124989,ps:136,kw:100,k:'Benzin',g:'Automatik',fin:131,
+  tags:['TÜV NEU','GARANTIE','KAMERA'],bilder:['6c/6ce8820a-2cc9-4792-b77a-5ae073ee0b14','95/9591eb39-72f4-4556-9acc-b08c5559a0b5','8a/8a029f5d-6452-4e2a-815b-e9054e13b90f']},
+ {m:'Mercedes-Benz',t:'A 180 BlueEfficiency AMG Line',p:13999,ez:'03/2013',j:2013,km:139989,ps:122,kw:90,k:'Benzin',g:'Schaltgetriebe',fin:148,
+  tags:['UNFALLFREI','FINANZIERUNG'],bilder:['82/828fa5f7-86c6-4a1c-a18b-9433f6b9b8ed']},
+ {m:'BMW',t:'320 d xDrive M Sport',p:31499,ez:'06/2021',j:2021,km:98155,ps:190,kw:140,k:'Diesel',g:'Automatik',fin:332,
+  tags:['GARANTIE','MwSt'],bilder:['08/083200d9-b403-4b41-8256-c1e62152a393']},
+ {m:'Audi',t:'A1 5-türig',p:12999,ez:'07/2016',j:2016,km:31155,ps:125,kw:92,k:'Benzin',g:'Schaltgetriebe',fin:137,
+  tags:['1. HAND','TÜV NEU','GARANTIE'],bilder:['78/7890822f-0f2a-4acc-8936-c742becd081b','69/699ee07a-50fc-4402-bd62-33cad4639f26','c2/c2bf3fd9-9f4e-49f1-bc19-d026af743042']},
+ {m:'Nissan',t:'Note Acenta Plus',p:8999,ez:'06/2016',j:2016,km:68107,ps:80,kw:59,k:'Benzin',g:'Schaltgetriebe',fin:95,
+  tags:['TÜV NEU','GARANTIE'],bilder:['89/899410f8-2a5c-4708-85a7-542b9c10f20b']},
+ {m:'Dacia',t:'Logan MCV Comfort',p:9999,ez:'05/2019',j:2019,km:69989,ps:73,kw:54,k:'Benzin',g:'Schaltgetriebe',fin:106,
+  tags:['1. HAND','KAMERA','TÜV NEU'],bilder:['33/339b57a3-60b4-4cce-afa1-91dd63df00f7']},
+ {m:'Toyota',t:'C-HR Team',p:14399,ez:'08/2018',j:2018,km:149989,ps:116,kw:85,k:'Benzin',g:'Schaltgetriebe',fin:152,
+  tags:['SERVICE','TÜV NEU','GARANTIE'],bilder:['eb/eb5675ef-5de0-411d-a85c-3276bf3382ad']},
+ {m:'Ford',t:'Tourneo Courier Trend',p:8999,ez:'12/2017',j:2017,km:146655,ps:101,kw:74,k:'Benzin',g:'Schaltgetriebe',fin:95,
+  tags:['AHK','ZAHNRIEMEN NEU','GARANTIE'],bilder:['c1/c1bcc34f-2a97-4dde-9aa6-c84211f98302']},
+ {m:'Opel',t:'Astra Edition',p:7998,ez:'04/2018',j:2018,km:124713,ps:101,kw:74,k:'Diesel',g:'Schaltgetriebe',fin:85,
+  tags:['1. HAND','TÜV NEU','MwSt'],bilder:['77/77d2c124-351f-4b99-9f37-2f4cf5368eac']},
+ {m:'Citroën',t:'C4 SpaceTourer Intensive',p:8499,ez:'04/2014',j:2014,km:149989,ps:116,kw:85,k:'Diesel',g:'Schaltgetriebe',fin:90,
+  tags:['KAMERA','TÜV NEU','GARANTIE'],bilder:['18/1886572d-cdc0-46ae-ba8b-bbf185752fc2']},
+ {m:'Hyundai',t:'Getz 1.1 Hit',p:1999,ez:'12/2007',j:2007,km:99989,ps:67,kw:49,k:'Benzin',g:'Schaltgetriebe',fin:38,
+  tags:['KLIMA','TÜV NEU','GARANTIE'],bilder:['cb/cbee7916-022b-4cb1-81eb-24fd396ddb11']},
+ {m:'BMW',t:'523i Limousine',p:9699,ez:'06/2010',j:2010,km:198613,ps:204,kw:150,k:'Benzin',g:'Automatik',fin:103,
+  tags:['AHK','ALU','TÜV NEU'],bilder:['3a/3a8c658c-6056-46ae-9588-2eda491196ff']},
+ {m:'Opel',t:'Astra K Sports Tourer Edition',p:7398,ez:'02/2018',j:2018,km:149989,ps:101,kw:74,k:'Diesel',g:'Schaltgetriebe',fin:78,
+  tags:['TÜV NEU','GARANTIE','MwSt'],bilder:['47/4775d7f2-0918-44c5-bc6e-5464362378c6']},
+ {m:'Jeep',t:'Grand Cherokee 3.0 CRD Summit',p:24998,ez:'10/2019',j:2019,km:214989,ps:250,kw:184,k:'Diesel',g:'Automatik',fin:264,
+  tags:['PANO','KAMERA','GARANTIE'],bilder:['16/165a37ca-328c-4a68-b4a4-764041cb602b']},
+ {m:'Jeep',t:'Grand Cherokee Summit',p:24998,ez:'10/2019',j:2019,km:217632,ps:250,kw:184,k:'Diesel',g:'Automatik',fin:264,
+  tags:['PANO','TÜV NEU','TAUSCH'],bilder:['7e/7e6f5167-f718-4722-8c12-ad7cf46da396']},
+ {m:'Mercedes-Benz',t:'GLE 350 AMG-Line',p:28998,ez:'04/2016',j:2016,km:287155,ps:258,kw:190,k:'Diesel',g:'Automatik',fin:306,
+  tags:['MASSAGE','PANO','TÜV NEU'],bilder:['ba/ba82508f-1e71-4c0b-a729-8aa301866fdd']},
+ {m:'Mercedes-Benz',t:'200 W124 Liebhaberfahrzeug',p:4699,ez:'05/1989',j:1989,km:111300,ps:75,kw:55,k:'Diesel',g:'Schaltgetriebe',fin:50,
+  tags:['LIEBHABER','UNFALLFREI'],bilder:['8f/8f3273c8-177e-4798-8318-7a5ca2bcb063']},
+ {m:'Hummer',t:'H2 LPG-Gasanlage',p:29999,ez:'04/2005',j:2005,km:192155,ps:322,kw:237,k:'Autogas (LPG)',g:'Automatik',fin:316,
+  tags:['FINANZIERUNG','UNFALLFREI'],bilder:['24/24e5c006-ac4d-4159-b468-144ad67c38fe']},
+ {m:'Opel',t:'Astra Innovation',p:3999,ez:'11/2011',j:2011,km:229989,ps:110,kw:81,k:'Diesel',g:'Schaltgetriebe',fin:43,
+  tags:['STANDHEIZUNG','TÜV NEU'],bilder:['d2/d2243b2e-bae0-4463-9606-213060e2126c']}
+];
+
+/* Echte Bewertungen. Weitere über die Portal-Widgets nachziehen. */
+const REVIEWS=[
+ {t:'Absolut empfehlenswerter Autohändler! Der TÜV wurde komplett neu gemacht, das Fahrzeug sogar mit Wunschkennzeichen angemeldet. Die gesamte Abwicklung war ehrlich, transparent und extrem unkompliziert.',n:'Käufer',c:'VW Golf 6 TSI',s:'AutoScout24'},
+ {t:'Der Kaufprozess war schnell, klar und fair. Herr Kander stand immer mit Beratung und für alle Fragen zur Verfügung.',n:'Käufer',c:'',s:'mobile.de'},
+ {t:'Absolut zufrieden — sowohl mit dem Fahrzeug als auch mit dem gesamten Kaufprozess.',n:'Käufer',c:'Citroën Grand C4 Picasso',s:'mobile.de'},
+ {t:'Sehr kompetent, freundlich und schnelle Abwicklung. Kann ich nur weiterempfehlen!',n:'Käufer',c:'',s:'mobile.de'},
+ {t:'Polecam, firma godna polecenia.',n:'Kunde aus Polen',c:'',s:'mobile.de'}
+];
+
+const $=s=>document.querySelector(s);
+const eur=n=>n.toLocaleString('de-DE')+' €';
+const kmf=n=>n.toLocaleString('de-DE')+' km';
+let ALL=[],GI=0,GN=0,lastI=-1,AFV=null;
+
+/* ── API integration ─────────────────────────────────────────────────── */
+const API_BASE=($('meta[name="api-base"]')?.content||location.origin).replace(/\/$/,'');
+
+const FUEL_DE={PETROL:'Benzin',DIESEL:'Diesel',ELECTRIC:'Elektro',HYBRID:'Hybrid',GAS:'Autogas (LPG)',OTHER:'Sonstige'};
+const TRANS_DE={MANUAL:'Schaltgetriebe',AUTOMATIC:'Automatik',SEMI_AUTO:'Halbautomatik'};
+const FUEL_API={'Benzin':'PETROL','Diesel':'DIESEL','Hybrid':'HYBRID','Elektro':'ELECTRIC','Autogas (LPG)':'GAS'};
+const TRANS_API={'Schaltgetriebe':'MANUAL','Automatik':'AUTOMATIC','Halbautomatik':'SEMI_AUTO'};
+const slugPart=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const FUEL_FORM={PETROL:'Benzin',DIESEL:'Diesel',ELECTRIC:'Elektro',HYBRID:'Hybrid',GAS:'Autogas (LPG)'};
+const TRANS_FORM={MANUAL:'Schaltgetriebe',AUTOMATIC:'Automatik',SEMI_AUTO:'Halbautomatik'};
+
+function apiToV(v){
+  const d=new Date(v.firstRegistration);
+  const ez=`${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+  return {
+    id:v.id, m:v.make, model:v.model, t:(v.model+' '+v.variant).trim(),
+    p:v.salePrice, ez, j:d.getFullYear(),
+    km:v.mileage, ps:v.powerPs??0, kw:v.powerKw??0,
+    k:FUEL_DE[v.fuelType]||v.fuelType, g:TRANS_DE[v.transmission]||v.transmission,
+    fin:v.financingRate??null, tags:v.tags||[], bilder:v.photos&&v.photos.length?v.photos:[''],
+    accidentFree:v.accidentFree, previousOwners:v.previousOwners,
+    status:v.status??'IN_STOCK'
+  };
+}
+
+// handles both CDN paths (no slash prefix) and API paths (/uploads/…) or full URLs
+function imgSrc(b){return b.match(/^https?:|^\//)?b:IMG+b+'?rule=mo-1600';}
+/* ────────────────────────────────────────────────────────────────────── */
+
+const camSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M3 7h3l2-2h8l2 2h3v12H3z"/><circle cx="12" cy="13" r="3.2"/></svg>';
+
+function card(v,i){
+  const sold=v.status==='SOLD',reserved=v.status==='RESERVED';
+  const stateTag=sold?'<span class="tag sold">VERKAUFT</span>':reserved?'<span class="tag reserved">RESERVIERT</span>':'';
+  const href=v.id&&!sold?`${API_BASE}/fahrzeuge/${slugPart(v.m)}-${slugPart(v.model)}-${v.id}`:'';
+  const tag=href?'a':'article';
+  return `<${tag} class="car-card${sold?' sold':''}" data-i="${i}"${href?` href="${href}"`:sold?' aria-disabled="true"':` tabindex="0" role="button"`} aria-label="${v.m} ${v.t}${sold?' — verkauft':reserved?' — reserviert':''}">
+    <div class="car-ph">
+      <div class="tags">${stateTag}${v.tags.slice(0,sold||reserved?1:2).map(t=>`<span class="tag${t.includes('TÜV')?' tuv':''}">${t}</span>`).join('')}</div>
+      <img loading="lazy" src="${imgSrc(v.bilder[0])}" alt="${v.m} ${v.t}">
+      ${v.bilder.length>1?`<span class="phcount">${camSVG}${v.bilder.length}</span>`:''}
+    </div>
+    <div class="car-b">
+      <h3>${v.m} ${v.t}</h3>
+      <p class="car-sub">EZ ${v.ez} · ${kmf(v.km)} · ${v.ps} PS · ${v.k}</p>
+      <div class="car-f">
+        <div class="pr">${eur(v.p)}<small>inkl. MwSt.</small></div>
+        <div class="fin">${v.fin?`ab ${v.fin} €<br>mtl.`:'Finanzierung<br>auf Anfrage'}</div>
+      </div>
+    </div>
+  </${tag}>`;
+}
+
+function render(){
+  const q=$('#q').value.trim().toLowerCase(),mk=$('#fMarke').value,
+        mp=parseInt($('#fPreis').value||'0',10),kf=$('#fKraft').value,so=$('#fSort').value;
+  let list=ALL.map((v,i)=>({v,i})).filter(({v})=>{
+    const hay=(v.m+' '+v.t+' '+v.g+' '+v.k+' '+v.tags.join(' ')).toLowerCase();
+    if(q&&!hay.includes(q))return false;
+    if(mk&&v.m!==mk)return false;
+    if(mp&&v.p>mp)return false;
+    if(kf&&v.k!==kf)return false;
+    return true;
+  });
+  const S={'preis-asc':(a,b)=>a.v.p-b.v.p,'preis-desc':(a,b)=>b.v.p-a.v.p,
+           'km-asc':(a,b)=>a.v.km-b.v.km,'ez-desc':(a,b)=>b.v.j-a.v.j};
+  list.sort(S[so]);
+  $('#count').textContent=list.length;
+  $('#grid').innerHTML=list.length?list.map(({v,i})=>card(v,i)).join('')
+    :`<div class="empty"><b>Kein Fahrzeug passt zu dieser Auswahl.</b><br>Rufen Sie durch — oft steht schon etwas auf dem Hof, das noch nicht online ist.<br><br><a class="btn btn-cyan btn-sm" href="tel:+493581750559">03581 750559</a></div>`;
+}
+
+/* Galerie */
+function gGo(n){
+  const tr=$('#gtrack');
+  GI=Math.max(0,Math.min(GN-1,n));
+  tr.scrollTo({left:GI*tr.clientWidth,behavior:'smooth'});
+  gSync();
+}
+function gSync(){
+  $('#gCount').textContent=(GI+1)+' / '+GN;
+  $('#gDots').innerHTML=Array.from({length:GN},(_,i)=>`<i class="${i===GI?'on':''}"></i>`).join('');
+  $('#gPrev').style.display=$('#gNext').style.display=GN>1?'grid':'none';
+  $('#gCount').style.display=GN>1?'block':'none';
+}
+function openCar(i){
+  const v=ALL[i];if(!v)return;
+  if(v.status==='SOLD')return;
+  AFV=v;
+  lastI=i;
+  GN=v.bilder.length;GI=0;
+  $('#gtrack').innerHTML=v.bilder.map(b=>`<img src="${imgSrc(b)}" alt="${v.m} ${v.t}">`).join('');
+  $('#gtrack').scrollLeft=0;
+  gSync();
+  $('#mT').textContent=v.m+' '+v.t;
+  $('#mS').textContent=`EZ ${v.ez} · ${kmf(v.km)} · ${eur(v.p)}`;
+  $('#mD').innerHTML=[['Preis',eur(v.p)],['Finanzierung',v.fin?'ab '+v.fin+' € mtl.':'auf Anfrage'],['Erstzulassung',v.ez],
+    ['Kilometer',kmf(v.km)],['Leistung',v.kw+' kW ('+v.ps+' PS)'],['Kraftstoff',v.k],
+    ['Getriebe',v.g],['Zustand',v.accidentFree?'Unfallfrei':'Vorschaden'],['Ausstattung',v.tags.join(' · ')]]
+    .map(([k,val])=>`<div><dt>${k}</dt><dd>${val}</dd></div>`).join('');
+  const waText=encodeURIComponent(`Hallo, ich interessiere mich für ${v.m} ${v.t}`);
+  $('#mWhatsApp').href='https://wa.me/4917913103004?text='+waText;
+  $('#modal').classList.add('on');document.body.style.overflow='hidden';
+  $('#modal .close').focus();
+}
+const closeCar=()=>{
+  const wasOpen=$('#modal').classList.contains('on');
+  $('#modal').classList.remove('on');document.body.style.overflow='';
+  if(wasOpen)document.querySelector('[data-i="'+lastI+'"]')?.focus();
+};
+$('#gPrev').addEventListener('click',()=>gGo(GI-1));
+$('#gNext').addEventListener('click',()=>gGo(GI+1));
+$('#gtrack').addEventListener('scroll',()=>{
+  const tr=$('#gtrack');const n=Math.round(tr.scrollLeft/tr.clientWidth);
+  if(n!==GI){GI=n;gSync();}
+});
+
+/* Bewertungen */
+function stars(){return '★★★★★';}
+$('#rtrack').innerHTML=REVIEWS.slice(0,2).map(r=>`<article class="rcard">
+  <div class="st">${stars()}</div>
+  <blockquote>„${r.t}"</blockquote>
+  <div class="who"><div><div class="nm">${r.n}</div>${r.c?`<div class="car">${r.c}</div>`:''}</div><span class="src">${r.s}</span></div>
+</article>`).join('');
+
+/* Verkaufsformular */
+let vinRequest=null;
+$('#vin').addEventListener('blur',async()=>{
+  const vin=$('#vin').value.trim().toUpperCase();
+  if(!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin))return;
+  vinRequest?.abort();
+  const request=new AbortController();vinRequest=request;
+  $('#vinSpinner').classList.add('on');
+  try{
+    const res=await fetch(`${API_BASE}/api/vin/${encodeURIComponent(vin)}`,{signal:request.signal});
+    if(!res.ok)return;
+    const data=await res.json();
+    const values={s1:data.make,s2:data.model,s3:data.year,s5:FUEL_FORM[data.fuelType],s6:TRANS_FORM[data.transmission]};
+    Object.entries(values).forEach(([id,value])=>{
+      if(value===undefined||value===null||value==='')return;
+      const field=$('#'+id);field.value=String(value);field.classList.remove('autofilled');
+      void field.offsetWidth;field.classList.add('autofilled');
+      setTimeout(()=>field.classList.remove('autofilled'),1300);
+    });
+  }catch(err){if(err.name!=='AbortError')return;}
+  finally{if(vinRequest===request){$('#vinSpinner').classList.remove('on');vinRequest=null;}}
+});
+
+function step(n){
+  document.querySelectorAll('.fstep').forEach(s=>s.classList.toggle('on',+s.dataset.step===n));
+  document.querySelectorAll('.dots i').forEach((d,i)=>d.classList.toggle('on',i<Math.min(n,3)));
+}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('.car-card');
+  if(c){if(c.tagName==='A')return;if(!c.classList.contains('sold'))return openCar(+c.dataset.i);}
+  if(e.target.closest('[data-close]'))return closeCar();
+  const n=e.target.closest('[data-next]');
+  if(n){const to=+n.dataset.next;
+    if(to===2){
+      const vin=$('#vin').value.trim();
+      const ok=vin.length===17&&['#s1','#s2','#s3','#s4'].every(s=>$(s).value.trim());
+      $('#e1').classList.toggle('on',!ok);if(!ok){$('#vin').focus();return;}
+    }
+    return step(to);}
+  const p=e.target.closest('[data-prev]');if(p)return step(+p.dataset.prev);
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeCar();
+  if($('#modal').classList.contains('on')){
+    if(e.key==='ArrowLeft')gGo(GI-1);
+    if(e.key==='ArrowRight')gGo(GI+1);
+    if(e.key==='Tab'&&$('#modal').contains(document.activeElement)){
+      const f=[...$('#modal').querySelectorAll('a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(el=>el.offsetParent!==null),first=f[0],last=f.at(-1);
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  }
+  if(e.key==='Enter'&&e.target.classList.contains('car-card')&&e.target.tagName!=='A'&&!e.target.classList.contains('sold'))openCar(+e.target.dataset.i);
+});
+$('#sf').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const ok=$('#s10').value.trim()&&$('#s11').value.trim();
+  $('#e3').classList.toggle('on',!ok);if(!ok){$('#s10').focus();return;}
+
+  const fullName=$('#s10').value.trim();
+  const spaceIdx=fullName.indexOf(' ');
+  const firstName=spaceIdx>-1?fullName.slice(0,spaceIdx):fullName;
+  const lastName=spaceIdx>-1?fullName.slice(spaceIdx+1):fullName;
+  const year=parseInt($('#s3').value,10);
+
+  const payload={
+    website:'', // honeypot — must stay empty
+    vin:$('#vin').value.trim().toUpperCase(),
+    make:$('#s1').value.trim(),
+    model:$('#s2').value.trim(),
+    firstRegistration:`${year}-01-01`,
+    mileage:parseInt($('#s4').value,10),
+    fuelType:FUEL_API[$('#s5').value]||'OTHER',
+    transmission:TRANS_API[$('#s6').value]||'MANUAL',
+    accidentFree:$('#s8').value==='Unfallfrei',
+    firstName,lastName,
+    phone:$('#s11').value.trim()||undefined,
+    email:$('#s12').value.trim()||undefined,
+    language:$('#s13').value.includes('Polnisch')?'PL':'DE',
+  };
+
+  const submit=$('#sSubmit');
+  submit.disabled=true;submit.textContent='Wird gesendet…';
+  try{
+    const res=await fetch(API_BASE+'/api/inquiries',{
+      method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)
+    });
+    if(!res.ok){
+      const data=await res.json();
+      const msg=data.errors?Object.values(data.errors).join(' · '):(data.error||'Fehler beim Senden.');
+      alert(msg);return;
+    }
+    $('#dtxt').textContent=`Danke, ${firstName}. Ihre Angaben zum ${$('#s1').value} ${$('#s2').value} sind erfasst. Wir melden uns in der Regel noch am selben Werktag.`;
+    step(4);document.querySelectorAll('.dots i').forEach(d=>d.classList.add('on'));
+  }catch{
+    alert('Verbindungsfehler. Bitte versuchen Sie es erneut.');
+  }finally{
+    submit.disabled=false;submit.textContent='Angebot anfragen';
+  }
+});
+['#q','#fMarke','#fPreis','#fKraft','#fSort'].forEach(s=>$(s).addEventListener('input',render));
+$('#reset').addEventListener('click',()=>{
+  $('#q').value='';$('#fMarke').value='';$('#fPreis').value='';$('#fKraft').value='';$('#fSort').value='preis-asc';render();
+});
+
+$('#jahr').textContent=new Date().getFullYear();
+$('#stand').textContent=new Date().toLocaleDateString('de-DE');
+
+/* ── Anfrage-Modal ─────────────────────────────────────────────────────── */
+const PREFIXES=[
+  {c:'DE',d:'+49',n:'Deutschland'},{c:'AT',d:'+43',n:'Österreich'},{c:'CH',d:'+41',n:'Schweiz'},
+  {c:'PL',d:'+48',n:'Polen'},{c:'CZ',d:'+420',n:'Tschechien'},{c:'SK',d:'+421',n:'Slowakei'},
+  {c:'HU',d:'+36',n:'Ungarn'},{c:'RO',d:'+40',n:'Rumänien'},{c:'BG',d:'+359',n:'Bulgarien'},
+  {c:'HR',d:'+385',n:'Kroatien'},{c:'RS',d:'+381',n:'Serbien'},{c:'TR',d:'+90',n:'Türkei'},
+  {c:'UA',d:'+380',n:'Ukraine'},{c:'RU',d:'+7',n:'Russland'},{c:'FR',d:'+33',n:'Frankreich'},
+  {c:'IT',d:'+39',n:'Italien'},{c:'ES',d:'+34',n:'Spanien'},{c:'PT',d:'+351',n:'Portugal'},
+  {c:'NL',d:'+31',n:'Niederlande'},{c:'BE',d:'+32',n:'Belgien'},{c:'GB',d:'+44',n:'Vereinigtes Königreich'},
+  {c:'SE',d:'+46',n:'Schweden'},{c:'NO',d:'+47',n:'Norwegen'},{c:'DK',d:'+45',n:'Dänemark'},
+  {c:'FI',d:'+358',n:'Finnland'},{c:'GR',d:'+30',n:'Griechenland'},{c:'LT',d:'+370',n:'Litauen'},
+  {c:'LV',d:'+371',n:'Lettland'},{c:'EE',d:'+372',n:'Estland'},{c:'US',d:'+1',n:'USA'},
+  {c:'CA',d:'+1',n:'Kanada'},{c:'AU',d:'+61',n:'Australien'},{c:'JP',d:'+81',n:'Japan'},
+  {c:'CN',d:'+86',n:'China'},{c:'IN',d:'+91',n:'Indien'},{c:'BR',d:'+55',n:'Brasilien'},
+  {c:'ZA',d:'+27',n:'Südafrika'},{c:'EG',d:'+20',n:'Ägypten'},{c:'MA',d:'+212',n:'Marokko'},
+  {c:'SA',d:'+966',n:'Saudi-Arabien'},{c:'AE',d:'+971',n:'Ver. Arab. Emirate'},
+  {c:'LB',d:'+961',n:'Libanon'},{c:'IQ',d:'+964',n:'Irak'},{c:'PK',d:'+92',n:'Pakistan'},
+  {c:'AF',d:'+93',n:'Afghanistan'},{c:'MX',d:'+52',n:'Mexiko'},{c:'AR',d:'+54',n:'Argentinien'},
+];
+function flag(c){return[...c.toUpperCase()].map(x=>String.fromCodePoint(x.charCodeAt(0)+127397)).join('')}
+let AFX=PREFIXES[0];
+function renderPfx(q=''){
+  const list=$('#pfxList');
+  const f=q?PREFIXES.filter(p=>p.n.toLowerCase().includes(q.toLowerCase())||p.d.includes(q)||p.c.toLowerCase().includes(q.toLowerCase())):PREFIXES;
+  list.innerHTML=f.map(p=>`<button type="button" class="pfx-opt${p.c===AFX.c?' sel':''}" data-c="${p.c}">
+    ${flag(p.c)} <span style="flex:1">${p.n}</span><span class="pfx-dial">${p.d}</span></button>`).join('');
+}
+function setPfx(p){AFX=p;$('#pfxFlag').textContent=flag(p.c);$('#pfxDial').textContent=p.d;$('#pfxDrop').classList.remove('on');$('#pfxBtn').classList.remove('open');}
+$('#pfxBtn').addEventListener('click',()=>{
+  const open=$('#pfxDrop').classList.toggle('on');
+  $('#pfxBtn').classList.toggle('open',open);
+  if(open){renderPfx();$('#pfxSearch').value='';setTimeout(()=>$('#pfxSearch').focus(),50);}
+});
+$('#pfxSearch').addEventListener('input',e=>renderPfx(e.target.value));
+$('#pfxList').addEventListener('click',e=>{
+  const btn=e.target.closest('.pfx-opt');
+  if(btn)setPfx(PREFIXES.find(p=>p.c===btn.dataset.c));
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.pfx-wrap')){$('#pfxDrop').classList.remove('on');$('#pfxBtn').classList.remove('open');}
+});
+
+function openAnfrage(v){
+  AFV=v;
+  $('#afSubtitle').textContent=v?v.m+' '+v.t:'';
+  $('#afForm').style.display='';$('#afOk').classList.remove('on');
+  ['afFirst','afLast','afPhone','afEmail'].forEach(id=>{ $('#'+id).value='';$('#'+id).classList.remove('err'); });
+  $('#afConsent').checked=false;
+  $('#afErr').classList.remove('on');$('#afErr').textContent='';
+  setPfx(PREFIXES[0]);
+  $('#anfrageModal').classList.add('on');document.body.style.overflow='hidden';
+  setTimeout(()=>$('#afFirst').focus(),80);
+}
+function closeAnfrage(){$('#anfrageModal').classList.remove('on');document.body.style.overflow='';}
+
+$('#btnAnfrage').addEventListener('click',()=>{
+  openAnfrage(AFV);
+},true);
+$('#afClose').addEventListener('click',closeAnfrage);
+$('#afCancel').addEventListener('click',closeAnfrage);
+$('#afBg').addEventListener('click',closeAnfrage);
+$('#afOkClose').addEventListener('click',closeAnfrage);
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&$('#anfrageModal').classList.contains('on'))closeAnfrage(); });
+
+$('#afForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const first=$('#afFirst').value.trim(),last=$('#afLast').value.trim(),phone=$('#afPhone').value.trim(),email=$('#afEmail').value.trim();
+  let ok=true;
+  ['afFirst','afLast','afPhone'].forEach(id=>{const v=$('#'+id).value.trim();$('#'+id).classList.toggle('err',!v);if(!v)ok=false;});
+  if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){$('#afEmail').classList.add('err');$('#afErr').textContent='Ungültige E-Mail-Adresse.';$('#afErr').classList.add('on');return;}
+  if(!ok){$('#afErr').textContent='Bitte füllen Sie alle Pflichtfelder aus.';$('#afErr').classList.add('on');return;}
+  if(!$('#afConsent').checked){$('#afErr').textContent='Bitte stimmen Sie der Datenschutzerklärung zu.';$('#afErr').classList.add('on');$('#afConsent').focus();return;}
+  $('#afErr').classList.remove('on');
+  $('#afSubmit').disabled=true;$('#afSubmit').textContent='Wird gesendet…';
+  try{
+    const res=await fetch(API_BASE+'/api/leads',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        firstName:first,lastName:last,
+        mobile:AFX.d+phone,
+        email:email||undefined,
+        vehicleId:AFV?.id??undefined,
+        make:AFV?.m??undefined,
+        model:AFV?.t??undefined,
+        consent:$('#afConsent').checked,
+        website:'',
+      }),
+    });
+    if(!res.ok){
+      const data=await res.json().catch(()=>({}));
+      const msg=data.code==='CONSENT_REQUIRED'?'Bitte stimmen Sie der Datenschutzerklärung zu.':
+        (data.errors?Object.values(data.errors).join(' · '):(data.error||'Fehler beim Senden.'));
+      $('#afErr').textContent=msg;$('#afErr').classList.add('on');
+    }else{
+      $('#afForm').style.display='none';$('#afOk').classList.add('on');
+    }
+  }catch{
+    $('#afErr').textContent='Verbindungsfehler. Bitte erneut versuchen.';$('#afErr').classList.add('on');
+  }finally{
+    $('#afSubmit').disabled=false;$('#afSubmit').textContent='Anfragen';
+  }
+});
+
+(async()=>{
+  try{
+    const data=await fetch(API_BASE+'/api/vehicles').then(r=>r.json());
+    ALL=data.length?data.map(apiToV):(location.protocol==='file:'?V:[]);
+  }catch{
+    ALL=V; // fallback to hardcoded data if API is unreachable
+  }
+  $('#anz').textContent=ALL.length;
+  [...new Set(ALL.map(v=>v.m))].sort().forEach(m=>$('#fMarke').insertAdjacentHTML('beforeend',`<option>${m}</option>`));
+  [...new Set(ALL.map(v=>v.k))].sort().forEach(k=>$('#fKraft').insertAdjacentHTML('beforeend',`<option>${k}</option>`));
+  $('#rail').innerHTML=ALL.map((v,i)=>({v,i})).filter(({v})=>v.status!=='SOLD').slice(0,8).map(({v,i})=>card(v,i)).join('');
+  render();
+})();
+</script>
+</body>
+</html>
